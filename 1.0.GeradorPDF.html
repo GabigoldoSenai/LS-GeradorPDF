@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador PDF</title>
+    <link rel="stylesheet" href="assets/stylesheet/style.css">
+</head>
+
+<body>
+    <div id="content">
+        <img src="assets/img/header-img.png" style="width: 700px; height: 150px;">
+
+        <div class="max-width">
+            <div class="imageContainer">
+                <img src="assets/img/placeholder.png" alt="Selecione uma imagem" id="imgPhoto">
+            </div>
+            <input type="file" id="flImage" name="fImage" accept="image/*">
+        </div>
+        <img src="assets/img/footer-img.png" style="max-width: 700px;">
+    </div>
+    <button id="generate-pdf"> Gerar PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+        let photo = document.getElementById('imgPhoto');
+        let file = document.getElementById('flImage');
+
+        photo.addEventListener('click', () => {
+            file.click();
+        })
+
+        file.addEventListener('change', (event) => {
+            let reader = new FileReader();
+
+            reader.onload = () => {
+                photo.src = reader.result;
+            }
+
+            reader.readAsDataURL(file.files[0]);
+
+        })
+
+        const btnGeneratepdf = document.querySelector("#generate-pdf");
+
+        btnGeneratepdf.addEventListener("click", () => {
+
+            const content = document.querySelector("#content")
+
+            const options = {
+                margin: [10, 10, 10, 10],
+                filename: "Comprovante impressora.pdf",
+                html2canvas: { scale: 1 },
+                jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+            }
+
+            html2pdf().set(options).from(content).save()
+        })
+    </script>
+</body>
+
+</html>

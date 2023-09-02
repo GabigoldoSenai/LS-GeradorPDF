@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+input[type='file']{
+    display:none;
+}
+
+.max-width{
+    max-width: 700px;
+}
+
+#imgPhoto{
+    margin-left: 25px;
+    background-image: cover;
+    width: 250px;
+    height: 250px;
+    background-color: pink;
+    border: solid black;
+    border-radius: 8px;
+    transition: background .2s;
+}
+
+#imgPhoto:hover{
+    background-color:white;
+    border: solid blueviolet;
+}
+
