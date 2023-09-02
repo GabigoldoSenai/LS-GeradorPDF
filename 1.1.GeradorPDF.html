@@ -9,27 +9,33 @@
 </head>
 
 <body>
+    <header>
+        <h1>Bem vindo ao Gerador de PDF!</h1>
+        <h2>Para gerar seu PDF, adicione as 3 fotos e clique no botão "Gerar PDF" no final da página.</h2>
+    </header>
     <div class="content" id="content">
-        <img src="assets/img/header-img.png" style="width: 700px; height: 150px;">
+        <img id="header" src="assets/img/header-img.png">
     
         <div class="max-width">
             <div class="imageContainer">
+                <h2>Visão 1</h2>
                 <img src="assets/img/placeholder.png" alt="Selecione uma imagem" id="imgPhoto">
             </div>
-            <input class="imgPhoto" type="file" id="flImage" name="fImage" accept="image/*">
-
+            <input type="file" id="flImage" name="fImage" accept="image/*">
+        
             <div class="imageContainer2">
+                <h2>Visão 2</h2>
                 <img src="assets/img/placeholder.png" alt="Selecione uma imagem" id="imgPhoto2">
             </div>
-            <input class="imgPhoto" type="file" id="flImage2" name="fImage2" accept="image/*">
-
+            <input type="file" id="flImage2" name="fImage2" accept="image/*">
+            
             <div class="imageContainer3">
+                <h2>Modelo</h2>
                 <img src="assets/img/placeholder.png" alt="Selecione uma imagem" id="imgPhoto3">
             </div>
-            <input class="imgPhoto" type="file" id="flImage3" name="fImage3" accept="image/*">
+            <input type="file" id="flImage3" name="fImage3" accept="image/*">
         </div>
-    
-        <img src="assets/img/footer-img.png" style="max-width: 700px;">
+        <img id="footer" src="assets/img/footer-img.png">
     </div>
     <button id="generate-pdf"> Gerar PDF</button>
 

@@ -59,7 +59,7 @@ btnGeneratepdf.addEventListener("click", () => {
     const content = document.querySelector("#content")
 
     const options = {
-        margin: [10, 10, 10, 10],
+        margin: [10, 10, 0, 10],
         filename: "Comprovante impressora.pdf",
         html2canvas: { scale: 1 },
         jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
