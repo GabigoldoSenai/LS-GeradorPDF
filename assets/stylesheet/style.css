@@ -1,7 +1,14 @@
 *{
+    margin:0;
     padding: 0;
     box-sizing: border-box;
     border: none;
+}
+
+.content{
+    display:block;
+    align-items: center;
+    min-width: 100vw;
 }
 
 input[type='file']{
@@ -10,13 +17,15 @@ input[type='file']{
 
 .max-width{
     max-width: 700px;
+    display:flex;
+    flex-wrap: wrap;
 }
 
 #imgPhoto{
     margin-left: 25px;
     background-image: cover;
-    width: 250px;
-    height: 250px;
+    max-width: 250px;
+    max-height: 200px;
     background-color: pink;
     border: solid black;
     border-radius: 8px;
@@ -24,6 +33,44 @@ input[type='file']{
 }
 
 #imgPhoto:hover{
+    background-color:white;
+    border: solid blueviolet;
+}
+
+#imgPhoto2{
+    margin-left: 25px;
+    background-image: cover;
+    max-width: 250px;
+    max-height: 200px;
+    background-color: pink;
+    border: solid black;
+    border-radius: 8px;
+    transition: background .2s;
+}
+
+#imgPhoto2:hover{
+    background-color:white;
+    border: solid blueviolet;
+}
+input[type='file2']{
+    display:none;
+}
+
+#imgPhoto3{
+    margin-left: 25px;
+    background-image: cover;
+    max-width: 250px;
+    max-height: 200px;
+    background-color: pink;
+    border: solid black;
+    border-radius: 8px;
+    transition: background .2s;
+}
+input[type='file3']{
+    display:none;
+}
+
+#imgPhoto3:hover{
     background-color:white;
     border: solid blueviolet;
 }

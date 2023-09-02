@@ -16,6 +16,42 @@ file.addEventListener('change', (event) => {
 
 })
 
+let photo2 = document.getElementById('imgPhoto2');
+let file2 = document.getElementById('flImage2');
+
+photo2.addEventListener('click', () => {
+    file2.click();
+})
+
+file2.addEventListener('change', (event) => {
+    let reader2 = new FileReader();
+
+    reader2.onload = () => {
+        photo2.src = reader2.result;
+    }
+
+    reader2.readAsDataURL(file2.files[0]);
+
+})
+
+let photo3 = document.getElementById('imgPhoto3');
+let file3 = document.getElementById('flImage3');
+
+photo3.addEventListener('click', () => {
+    file3.click();
+})
+
+file3.addEventListener('change', (event) => {
+    let reader3 = new FileReader();
+
+    reader3.onload = () => {
+        photo3.src = reader3.result;
+    }
+
+    reader3.readAsDataURL(file3.files[0]);
+
+})
+
 const btnGeneratepdf = document.querySelector("#generate-pdf");
 
 btnGeneratepdf.addEventListener("click", () => {
