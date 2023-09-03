@@ -46,11 +46,6 @@ h2{
     height: 150px;
 }
 
-#footer{
-    width: 700px;
-    height: 250px;
-}
-
 .imageContainer,
 .imageContainer2,
 .imageContainer3{
@@ -58,6 +53,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor:pointer;
 }
 
 #imgPhoto,
